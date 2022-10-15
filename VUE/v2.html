@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <style>
+        .div_1 {
+            background: rgb(255, 187, 187);
+        }
+    </style>
 </head>
 <body>
-    <div id="app">
+    <div class="div_1" id="app">
         <select name="" id="" v-model="city" @change="getWeather">
             <option value="Taipei">台北</option>
             <option value="Tokyo">東京</option>
