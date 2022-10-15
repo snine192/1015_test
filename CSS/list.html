@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-hant-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: decimal;
+            color: lightslategray;
+            /* 
+            none
+            disc, circle, square
+            decimal, upper-alpha, lower-alpha, upper-roman, lower-roman
+            cjk-ideographic, hiragana, katakana,
+            hebrew, armenian, georgian, lower-greek
+            */
+        }
+        li::marker {
+            color: lightcoral;
+        }
+        h2 {
+            counter-increment: h2;
+            display: list-item;
+            list-style-position: inside;
+        }
+        /* 設定計數器 */
+        h2::marker {
+            content: '\2116' counter(h2)':';
+            color: #2a5300;
+        }
+        /* 設定計數器裡的數字、文字或符號 */
+    </style>
+</head>
+<body>
+    <div>
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus perspiciatis dolorem animi sint magnam, fugiat labore quos neque earum facere.
+        </p>
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus perspiciatis dolorem animi sint magnam, fugiat labore quos neque earum facere.
+        </p>
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus perspiciatis dolorem animi sint magnam, fugiat labore quos neque earum facere.
+        </p>
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus perspiciatis dolorem animi sint magnam, fugiat labore quos neque earum facere.
+        </p>
+    </div>
+    <ul>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+    </ul>
+    <ol>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+    </ol>
+</body>
+</html>

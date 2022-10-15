@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>title</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur qui error animi incidunt nam eos aperiam cum quod voluptas laboriosam autem, non natus sapiente? Eligendi cupiditate delectus molestiae aperiam fuga.</p>
+
+        <div class="content">
+            <h2>title</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel soluta eum nisi nobis a debitis, aliquid necessitatibus laudantium facere quidem aspernatur amet expedita, enim facilis eveniet mollitia magni temporibus? Saepe.</p>
+            <!-- asdf -->
+            <ul>
+                <li class="item">list</li>
+                <li class="item">list</li>
+                <li class="item">list</li>
+                <li class="item">list</li>
+                <li class="item">list</li>
+                <li class="item">list</li>
+            </ul>
+        </div>
+    </div>
+<script>
+    let el = document.querySelector('.content');
+    console.log(el);
+    // 父節點
+    console.log(el.parentNode);
+    // 父元素
+    console.log(el.parentElement);
+    // 子節點
+    console.log(el.childNodes);
+    // 子元素
+    console.log(el.children);
+
+    // 同輩節點
+    console.log(el.nextSibling);
+    console.log(el.previousSibling);
+    // 同輩元素
+    console.log(el.nextElementSibling);
+    console.log(el.previousElementSibling);
+
+    // 節點
+    // 元素節點
+    // 文字節點(包含換行)
+    // 註解節點
+
+</script>
+</body>
+</html>

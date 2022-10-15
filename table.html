@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-hant-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <!-- 表格結構 tr列 td行 -->
+    <table border="5" width="600" height="400">
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th rowspan="2">D</th>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td>F</td>
+            <td>G</td>            
+        </tr>
+        <tr>
+            <td colspan="2">I</td>
+            <td>K</td>
+            <td>L</td>
+        </tr>
+    </table>
+    <table border="1" width="600" height="400">
+        <thead>
+            <tr>
+                <th>標題</th>
+                <th>標題</th>
+                <th>標題</th>
+                <th>標題</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th rowspan="2">D</th>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>F</td>
+                <td>G</td>            
+            </tr>
+            <tr>
+                <td colspan="2">I</td>
+                <td>K</td>
+                <td>L</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="4">備註</td>
+        </tfoot>
+    </table>
+    <table border="2" width="1200" height="400">
+        <thead>
+            <th width="150" height="50"></th>
+            <th width="150" height="50">星期一</th>
+            <th width="150" height="50">星期二</th>
+            <th width="150" height="50">星期三</th>
+            <th width="150" height="50">星期四</th>
+            <th width="150" height="50">星期五</th>
+            <th width="150" height="50">星期六</th>
+        </thead>
+        <tr>
+            <th>08:00~09:00</th>
+            <td><img src="https://picsum.photos/150/150?random=2" alt=""></td>
+            <td><img src="https://picsum.photos/150/150?random=3" alt=""></td>
+            <td><img src="https://picsum.photos/150/150?random=4" alt=""></td>
+            <td><img src="https://picsum.photos/150/150?random=1" alt=""></td>
+            <td><img src="https://picsum.photos/150/150?random=5" alt=""></td>
+            <th rowspan="2">A</th>
+        </tr>
+        <tr>
+            <th>09:00~10:00</th>
+            <th width="100" height="100">數學</th>
+            <th>英文</th>
+            <th>化學</th>
+            <th>化學</th>
+            <th>化學</th>
+        </tr>
+    </table>
+    <tbody></tbody>
+</body>
+</html>

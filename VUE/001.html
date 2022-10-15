@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <p>
+            {{desc}}
+        </p>
+        <div>
+            {{number}}
+        </div>
+        <div v-for="data of products">
+            <h2>
+                {{data.name}} : {{data.age}}
+            </h2>
+            <h3>
+                Price: {{data.price}} $
+            </h3>
+        </div>
+        <div v-if="qty > 10">數量: 貨量充足</div>
+        <div v-else-if="qty > 0">數量:{{qty}}</div>
+        <div v-else>完售</div>
+
+        <div v-show="qty > 10">貨量充足</div>
+        <div v-show="qty > 0">數量:{{qty}}</div>
+        <div v-show="qty == 0">完售</div>
+        <img v-bind:src="cover" alt="">
+        <img :src="cover" alt="">
+        <a :href="link">yahoo</a>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return{
+                    title: 'hello Veu!!',
+                    desc: 'lorem dofij fjlkew;q aioel',
+                    number: 2954,
+                    qty: 1,
+                    cover:'https://picsum.photos/id/555/800/600',
+                    link:'https:\\tw.yahoo.com',
+                    products:[
+                        {
+                            id:1,
+                            name:'jack',
+                            age: 29,
+                            price: 30
+                        },{
+                            id:2,
+                            name:'peter',
+                            age:20,
+                            price: 25
+                        }
+                    ]
+                }
+            },
+        }).mount('#app');
+    </script>
+</body>
+</html>

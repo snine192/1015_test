@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .container {
+            width: 1200px;
+            margin-inline: auto;
+            background-color: #ccc;
+            display: flex;
+            /* flex-wrap: wrap; */
+            flex-direction: row;
+
+         }
+         /* 
+         flex-direction為row 時，flex-basis表寬度
+         flex-direction為column時，flex-basis表高度
+
+         flex-grow 延展，預設為0，關閉延展
+         flex-shrink 壓縮，預設為1，開啟壓縮
+         ps.壓縮與換行會彼此衝突，開啟換行之後壓縮會失效
+          */
+        .box {
+            /* width: calc(100% / 6); */
+            /* flex-basis: calc(100% / 2); */
+            /* flex-grow: 0; */
+            /* flex-shrink: 0; */
+            flex: 1 0 calc(100%/6);
+            /* flex:[grow shrink basis] */
+            /* flex:1 0 0; */
+        }
+        .box:nth-of-type(1){
+            background-color: chocolate;
+            /* flex-grow: 1; */
+            /* 600 * 1 / 6 = 100 200+100=300 */
+            /* flex-shrink: 1; */
+            /* 600 * 1 / 4 =150  600-150=450 */
+            order: 5;
+        }
+        .box:nth-of-type(2){
+            background-color: cornflowerblue;
+            /* flex-grow: 1; */
+            /* 600 * 3 / 6 = 300 200+300=500 */
+            /* flex-shrink: 2; */
+            /* 600 * 2 / 4 =300  600-300=300 */
+            order: 4;
+        }
+        .box:nth-of-type(3){
+            background-color: crimson;
+            /* flex-grow: 1; */
+            /* 600 * 1 / 6 = 100 200+100=300 */
+            /* flex-shrink: 1; */
+            order: 1;
+        }
+        .box:nth-of-type(4){
+            background-color: darkgreen;
+            order: 3;
+        }
+
+        /* 
+        排序邏輯
+        1. 沒有設定排序(自然排序)會優先
+        2.排序越小越前面
+         */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus suscipit esse pariatur aperiam assumenda placeat atque reiciendis nesciunt tempore magni ipsa, hic doloremque aliquam mollitia facere deserunt natus. Explicabo, eius.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus suscipit esse pariatur aperiam assumenda placeat atque reiciendis nesciunt tempore magni ipsa, hic doloremque aliquam mollitia facere deserunt natus. Explicabo, eius.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus suscipit esse pariatur aperiam assumenda placeat atque reiciendis nesciunt tempore magni ipsa, hic doloremque aliquam mollitia facere deserunt natus. Explicabo, eius.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus suscipit esse pariatur aperiam assumenda placeat atque reiciendis nesciunt tempore magni ipsa, hic doloremque aliquam mollitia facere deserunt natus. Explicabo, eius.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus suscipit esse pariatur aperiam assumenda placeat atque reiciendis nesciunt tempore magni ipsa, hic doloremque aliquam mollitia facere deserunt natus. Explicabo, eius.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus suscipit esse pariatur aperiam assumenda placeat atque reiciendis nesciunt tempore magni ipsa, hic doloremque aliquam mollitia facere deserunt natus. Explicabo, eius.
+            </p> 
+        </div>
+        <div class="box">
+        <h2>title 3</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus suscipit esse pariatur aperiam assumenda placeat atque reiciendis nesciunt tempore magni ipsa, hic doloremque aliquam mollitia facere deserunt natus. Explicabo, eius.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus suscipit esse pariatur aperiam assumenda placeat atque reiciendis nesciunt tempore magni ipsa, hic doloremque aliquam mollitia facere deserunt natus. Explicabo, eius.
+        </p> 
+    </div>
+        
+    </div>
+</body>
+</html>

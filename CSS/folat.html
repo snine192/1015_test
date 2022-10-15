@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            background-color: rgb(95, 199, 185);
+            /* height: 200px; */
+            /* overflow: auto; */
+            display: flow-root;
+        }
+        .box {
+            width: 200px;
+
+            float: left;
+            padding-inline: 10px;
+            border: solid rgb(165, 43, 43) 1px;
+        }
+        .box1 {
+            width: 200px;
+
+            float: left;
+            border: solid rgb(165, 43, 43) 1px;
+            overflow:hidden;
+        }
+        /* 
+        父元素崩塌
+        當所有的子元素都是浮動時，父元素的高度會歸零
+
+        解法
+        1. 設高度
+        2. overflow
+        3. folw-root 專門為浮動高度來解決問題的
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box1"> <a href="https://www.google.com.tw"><img src="https://picsum.photos/id/3/200/200" title="https://www.google.com.tw"></a></div>
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione laborum repellendus doloremque inventore molestiae molestias impedit praesentium itaque possimus earum! Magnam quo officia tempora molestiae commodi nihil nam. Nisi, quae!</div>
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione laborum repellendus doloremque inventore molestiae molestias impedit praesentium itaque possimus earum! Magnam quo officia tempora molestiae commodi nihil nam. Nisi, quae!</div>
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione laborum repellendus doloremque inventore molestiae molestias impedit praesentium itaque possimus earum! Magnam quo officia tempora molestiae commodi nihil nam. Nisi, quae!</div>
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione laborum repellendus doloremque inventore molestiae molestias impedit praesentium itaque possimus earum! Magnam quo officia tempora molestiae commodi nihil nam. Nisi, quae!</div>
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione laborum repellendus doloremque inventore molestiae molestias impedit praesentium itaque possimus earum! Magnam quo officia tempora molestiae commodi nihil nam. Nisi, quae!</div>
+    </div>
+</body>
+</html>

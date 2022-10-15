@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .slider {
+            width: 1200px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .slider-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            transition: 600ms;
+        }
+        .slider-item {
+            width: 1200px;
+            position: relative;
+        }
+        .slider-nav {
+            position: absolute;
+            z-index: 99;
+            background: rgba(170, 170, 170, 0);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            bottom: 0;
+        }
+        .slider-prev {
+            height: 100%;
+            width: 10%;
+            background: rgba(170, 170, 170, 0);
+            bottom: 50%;
+            left: 50%;
+        }
+        .slider-next {
+            height: 100%;
+            width: 10%;
+            background: rgba(170, 170, 170, 0);
+        }
+        .slider-next:hover {
+            background: rgba(170, 170, 170, 0.356);
+            transition: 600ms;
+        }
+        .slider-prev:hover {
+            background: rgba(170, 170, 170, 0.3);
+            transition: 600ms;
+        }
+        .fa-solid.fa-left-long {
+            position: absolute;
+            justify-content: space-between;
+            bottom: 50%;
+            left: 4%;
+            color: black;
+        }
+        .fa-solid.fa-arrow-right {
+            position: absolute;
+            justify-content: space-between;
+            bottom: 50%;
+            left: 95%;
+            color: black;
+        }
+        .slider-caption {
+            position: absolute;
+            width: fit-content;
+            height: fit-content;
+            background-color: rgba(62, 233, 255, 0.3);
+            backdrop-filter: blur(5px);
+            text-align: center;
+
+            inset: 0;
+            margin: auto;
+            padding: 30px;
+            border-radius: 5px;
+        }
+        .slider-caption h4 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+        }
+        .slider-caption p {
+            font-size: 1.5rem;
+            font-weight: lighter;
+        }
+        .slider-dots {
+            display: flex;
+            position: absolute;
+            z-index: 999;
+            background-color: rgba(255, 255, 255, 0.603);
+            width: 100%;
+            padding: 15px;
+            bottom: 0;
+            justify-content: center;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 50%;
+            margin-inline: 4px;
+        }
+        .dot.active {
+            background-color: red;
+        }
+        .dot:hover {
+            background-color: rgb(47, 0, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-wrapper">
+            <div class="slider-item active">
+                <img src="https://picsum.photos/id/114/1400/800" alt="">
+                <div class="slider-caption">
+                    <h4>silder 1</h4>
+                    <p>社區客戶，每天部門印度是啊。</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/115/1400/800" alt="">
+                <div class="slider-caption">
+                    <h4>silder 2</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quos?</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/116/1400/800" alt="">
+                <div class="slider-caption">
+                    <h4>silder 3</h4>
+                    <p>採用互動，數碼相機也是寶寶方面阿摩斯支。</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/117/1400/800" alt="">
+                <div class="slider-caption">
+                    <h4>silder 4</h4>
+                    <p>如果你解決方案，可以用如何裝備平衡提示，解放民眾電器。</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/118/1400/800" alt="">
+                <div class="slider-caption">
+                    <h4>silder 5</h4>
+                    <p>註冊時間東方不住水晶實業緩緩力量徹底德國顯示神秘競爭，伺。</p>
+                </div>
+        </div>
+    </div>
+
+        
+        <div class="slider-nav">
+            <a href="#" class="slider-prev"><i class="fa-solid fa-left-long"></i></a>
+            <a href="#" class="slider-next"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="slider-dots"></div>
+
+    </div>
+    <script>
+        let imgs = document.querySelectorAll('.slider-item');
+        let total = imgs.length;
+        let currentIndex = 0;
+        let next = document.querySelector('.slider-next');
+        let prev = document.querySelector('.slider-prev');
+        let sliderItem = document.querySelector('.slider-item');
+        let sliderWidth = sliderItem.clientWidth;
+        let wrapperWidth = sliderWidth * total;
+        let timeout = 5000;
+
+        let wrapper = document.querySelector('.slider-wrapper');
+        wrapper.style.width = wrapperWidth + 'px';
+        
+        next.onclick = () => {
+            slider()
+            clearInterval(timer);
+            timer = setInterval(slider,timeout)
+        }
+        prev.onclick = () => {
+            slider('prev')
+            clearInterval(timer);
+            timer = setInterval(slider,timeout)
+        }
+
+        const slider = (direction)=>{
+
+            if(direction === 'prev'){
+                currentIndex = currentIndex === 0 ? total : currentIndex;
+                currentIndex = (currentIndex - 1) % total;
+            }else{
+                currentIndex = (currentIndex + 1) % total;
+            }
+
+            move();
+            dots[currentIndex].classList.add('active');
+            document.querySelector('.dot.active').classList.remove('active');
+            dots[currentIndex].classList.add('active');
+        }
+
+        function move(){
+            wrapper.style.marginLeft = -(sliderWidth * currentIndex) + 'px';
+        }
+
+        let timer = setInterval(slider,timeout);
+
+
+        for(i=0; i<total; i++){
+            let dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.dataset.img = i;
+            document.querySelector('.slider-dots').append(dot);
+        }
+
+        let dots = document.querySelectorAll('.dot');
+        for(let dot of dots){
+            dot.onclick = function(){
+                console.log(this);
+                currentIndex = this.dataset.img;
+                document.querySelector('.dot.active').classList.remove('active');
+                // imgs[currentIndex].classList.add('active');
+                dots[currentIndex].classList.add('active');
+                move()
+                clearInterval(timer);
+                timer = setInterval(slider,timeout)
+            }
+        }
+    </script>
+</body>
+</html>

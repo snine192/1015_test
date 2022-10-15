@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 0;
+        }
+        .box {
+            width: 100px;
+            /* height: 300px; */
+            background-color: sandybrown;
+
+            vertical-align: top;
+            
+            display: inline-block;
+
+            font-size: 16px;
+        }
+        /* 
+        inline-block 之間會有4px不等的空隙
+        解法
+        1. 將父元素的font-size 設定為0
+        2. 將自己的font-size還原
+        */
+        a {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cum est optio, vero aperiam modi quia ut velit libero a quasi sequi ab commodi laboriosam dignissimos tenetur saepe, soluta distinctio?
+    </div>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus sunt magnam dicta porro sapiente voluptatibus nisi laboriosam minima nesciunt! Distinctio?
+    </div>
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates qui quam aut fugiat odit sequi repellendus quos tempore dicta autem consectetur vero inventore, saepe omnis culpa ipsam recusandae? A, veniam?</div>
+    <div class="box"><img src="https://picsum.photos/id/123/100/200" alt=""></div>
+    <br>
+    <a class="box" href="https://www.google.com.tw"><img src="https://picsum.photos/id/3/100/200" title="https://www.google.com.tw"></a>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Segoe UI';
+    }
+    .container {
+        width: 1200px;
+        /* height: 1600px; */
+        margin-inline: auto;
+        background-color: lightgreen;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        /* row, column, row-reverse, column-reverse */
+        justify-content: space-evenly;
+        /* flex-start, flex-end, center
+           space-between, space-around, space-evenly */
+        align-items: baseline;
+        /* flex-start, flex-end, center
+           stretch, baseline (這邊是第一個字的下面對齊)
+         */
+        
+        /* 
+        flex-direction 為row時
+        justify-content 表示水平對齊
+        align-items 表示垂直對齊
+        
+        flex-direction 為column時
+        justify-content 表示垂直對齊
+        align-items 表示水平對齊
+        */
+    }
+    .box {
+        width: 200px;
+        /* height: 400px; */
+        /* padding-inline: 15px; */
+        /* background-color: #ccc; */
+        /* border: 1px inset #ffffff; */
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>tille1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque sapiente omnis aperiam cumque deleniti quam soluta tempore qui eaque natus enim, libero perspiciatis provident! Magni quas qui delectus rem odit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque sapiente omnis aperiam cumque deleniti quam soluta tempore qui eaque natus enim, libero perspiciatis provident! Magni quas qui delectus rem odit.</p>
+        </div>
+        <div class="box">
+            <h2>tille2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque sapiente omnis aperiam cumque deleniti quam soluta tempore qui eaque natus enim, libero perspiciatis provident! Magni quas qui delectus rem odit.</p>
+        </div>
+        <div class="box">
+            <h2>tille3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque sapiente omnis aperiam cumque deleniti quam soluta tempore qui eaque natus enim, libero perspiciatis provident! Magni quas qui delectus rem odit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque sapiente omnis aperiam cumque deleniti quam soluta tempore qui eaque natus enim, libero perspiciatis provident! Magni quas qui delectus rem odit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque sapiente omnis aperiam cumque deleniti quam soluta tempore qui eaque natus enim, libero perspiciatis provident! Magni quas qui delectus rem odit.</p>
+        </div>
+        <!-- <div class="box">
+            <h2>tille4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque sapiente omnis aperiam cumque deleniti quam soluta tempore qui eaque natus enim, libero perspiciatis provident! Magni quas qui delectus rem odit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque sapiente omnis aperiam cumque deleniti quam soluta tempore qui eaque natus enim, libero perspiciatis provident! Magni quas qui delectus rem odit.</p>
+        </div>
+        <div class="box">
+            <h2>tille5</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque sapiente omnis aperiam cumque deleniti quam soluta tempore qui eaque natus enim, libero perspiciatis provident! Magni quas qui delectus rem odit.</p>
+        </div>
+        <div class="box">
+            <h2>tille6</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque sapiente omnis aperiam cumque deleniti quam soluta tempore qui eaque natus enim, libero perspiciatis provident! Magni quas qui delectus rem odit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque sapiente omnis aperiam cumque deleniti quam soluta tempore qui eaque natus enim, libero perspiciatis provident! Magni quas qui delectus rem odit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque sapiente omnis aperiam cumque deleniti quam soluta tempore qui eaque natus enim, libero perspiciatis provident! Magni quas qui delectus rem odit.</p>
+        </div> -->
+    </div>
+</body>
+</html>

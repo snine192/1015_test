@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <form action="">
+            <input type="text" v-model="input">
+            <!-- <input type="submit" value="新增項目" v-on:click.prevent="addTodo()"> -->
+            <input type="submit" value="新增項目" @click.prevent="addTodo()">
+        </form>
+        <!-- <div>
+            <div v-for="todo of todos">{{todo.name}}
+                <input type="checkbox" v-model="todo.isCompleted">
+            </div>
+        </div> -->
+        <h2 v-show="completedTodo.length != 0">已完成</h2>
+        <div v-for="todo of completedTodo">
+            {{todo.name}}
+            <input type="checkbox" v-model="todo.isCompleted" :key="todo.id">
+        </div>
+        <h2 v-show="uncompletedTodo.length != 0">未完成</h2><div v-for="todo of uncompletedTodo">
+            {{todo.name}}
+            <input type="checkbox" v-model="todo.isCompleted" :key="todo.id">
+    </div>
+
+    <script>
+        Vue.createApp({
+            data(){
+                return{
+                    input:'',
+                    todos:[
+                        {
+                            id:0,
+                            name: '寫作業',
+                            isCompleted: false,
+                        },{
+                            id:1,
+                            name: '洗衣服',
+                            isCompleted: true
+                        },{
+                            id:2,
+                            name: '掃地',
+                            isCompleted: false
+                        }
+                    ]
+                }
+            },
+            methods:{
+                addTodo(){
+                    this.todos.push({
+                        // id: this.todos.length + 1,
+                        id: Date.now(),
+                        name: this.input,
+                        isCompleted:false
+                    });
+                    this.input = '';
+                }
+            },
+            computed:{
+                completedTodo(){
+                    return this.todos.filter(function(todo){
+                        return todo.isCompleted === true
+                    })
+                },uncompletedTodo(){
+                    return this.todos.filter(function(todo){
+                        return todo.isCompleted === false
+                    })
+                }
+
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>

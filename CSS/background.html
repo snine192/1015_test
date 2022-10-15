@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #c3e7f8;
+            background-image: 
+            /* linear-gradient(red, transparent), */
+            repeating-linear-gradient(#000 0px ,#000 1px, transparent 1px, transparent 2px),
+            url('https://picsum.photos/id/123/1920/1080');
+            /* background-image:initial; */
+            background-repeat: no-repeat;
+            /* repeat, no-repeat, repeat-x, repeat-y */
+            background-position: center;
+            /* 用座標1000px 200px */
+            /* top, bottom, left, right, center */
+            background-attachment: fixed;
+            /* scroll, fixed */
+            background-size: cover;
+            /* contain, cover */
+            background-blend-mode: luminosity;
+            /* 
+                screen      濾色(去黑留白)
+                multiply    色彩增值(去白留黑)
+                overlay     覆蓋
+                darken      變暗
+                lighten     變亮
+                color       顏色
+                luminosity  明度
+                hue         色相
+                soft-light  柔光
+                hard-light  實光
+                color-burn  加深顏色
+                color-dodge 加亮顏色
+                exclusion   排除
+                difference  差異化
+                Saturation  飽合度
+            */
+        }
+        h1 {
+            color: white;
+        }
+        p {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Title</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non cum unde sequi odit voluptatum corrupti. Ea quaerat ipsam molestias reiciendis blanditiis at quisquam apiente esse, similique corporis molestiae libero? At?</p>
+</body>
+</html>

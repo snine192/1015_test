@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;500&family=Roboto:ital,wght@0,100;0,400;1,500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+body {
+    font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+    scroll-snap-type: y mandatory;
+}
+img {
+    width: 100%;
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans+TC:wght@100;400;700;900&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'DotGothic16','Segoe UI','Noto Sans TC';
+            background-color: #fff;
+                background-image:
+                linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+                linear-gradient(#eee .1em, transparent .1em);
+                background-size: 100% 1.2em;
+        }
+        img {
+            width: 100%;
+            display: block;
+            /* vertical-align: top; */
+        }
+        
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: baseline;
+        }
+        .box {
+            width: calc(100% /3);
+            padding: 15px;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.308);
+            overflow: hidden;
+        }
+        .card-cover {
+            /* widows: 400px; */
+            /* height: 400px; */
+            aspect-ratio: 1 / 1;
+            /* background-color: #ff0000; */
+        }
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .card-title {
+            display: flex;
+            align-items: center;
+        }
+        .card-on {
+            font-size: 4rem;
+            font-weight: bold;
+            color: chocolate;
+        }
+        .card-title h3 {
+            font-size: 26px;
+            color: rgb(0, 73, 9);
+            line-height: 1.2rem;
+            padding-top: 8px;
+            margin-left: 20px;
+        }
+        /* .card-body::before {
+            content: '01';
+            display:block ;
+            font-size: 4rem;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            color: chocolate;
+        } */
+        .card-title small {
+            font-size: 14px;
+            color: rgb(165, 165, 165);
+            font-weight: normal;
+        }
+        .card-body {
+            padding: 13px;
+            padding-block-start: 20px;
+            padding-block-end: 30px;
+        }
+        .card-body h4 {
+            color: rgb(0, 73, 9);
+            margin-top: 10px;
+            font-weight: normal;
+            width: fit-content;
+            font-size: 1.2rem;
+            margin-left: 8px;
+
+            position: relative;
+        }
+        /* 虛擬元素選取器 */
+        .card-body h4::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 20px;
+            background-color: #f7dbba;
+
+            position: absolute;
+            /* top, bottom, left, right */
+            bottom: -5px;
+            left: -1px;
+            z-index: -1;
+        }
+        .card-body ul {
+            /* list-style:none;    */
+            /* list-style-type: '一 ' ; */
+            color: #666;
+            list-style-position: inside;
+            line-height: 2rem;
+            padding-top: 20px;
+        }
+        .card-body li::marker {
+            content: '一 ';
+            color: #aaa;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/id/3/600/300" alt="">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                       <div class="card-on">01</div>
+                       <h3>
+                           技術力
+                           <br>
+                           <small>Technical</small>
+                       </h3>
+                    </div>
+                    
+                    <h4>【為你的學習品質專業把關】</h4>
+                    <ul>
+                        <li>課程內容規劃貼合產業需求及最新趨勢</li>
+                        <li>完成高水準作品集提升職場競爭力</li>
+                    </ul>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div class="box">
+            <div class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/id/5/400"alt="">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                       <div class="card-on">02</div>
+                       <h3>協作力<br>
+                       <small>Cooperation</small>
+                       </h3>
+                    </div>
+
+                    <h4>【團隊合作一同成長、累積人脈】</h4>
+                    <ul>
+                        <li>提前佈屬學員在業界所需的協作能力</li>
+                        <li>與共同目標的同學們一起成長學習</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="box">
+            <div class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/id/1/400"alt="">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                      <div class="card-on">03</div>
+                      <h3>競爭力<br>
+                      <small>Competition</small>
+                    </h3>
+                    </div>
+
+                    <h4>【求職接案輔導，做你最堅強的後盾】</h4>
+                    <ul>
+                        <li>專業設計公司團隊輔導增加提案成功率</li>
+                        <li>企業單位爭相選擇赫綵培育的設計人才</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

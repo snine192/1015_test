@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            transition: 600ms;
+        }
+        p.active {
+             color: aqua;
+             background-color: coral;
+             padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn-add">click</button>
+    <button class="btn-remove">click</button>
+    <button class="btn-toggle">click</button>
+    <p>
+        不必驚人各項，老公。
+    </p>
+
+    <script>
+        let btnAdd =document.querySelector('.btn-add');
+        let btnRemove =document.querySelector('.btn-remove');
+        let btnToggle =document.querySelector('.btn-toggle');
+        // console.log(btn);
+        let p = document.querySelector('p');
+        // console.log(p);
+        
+        btnAdd.onclick = function(){
+
+            // document.querySelector('p').style.color = 'red';
+            // p.style.color = 'red';
+            // p.style.backgroundColor = '#aaa';
+            // p.style.padding = "15px";
+            p.classList.add('active');
+        }
+        btnRemove.onclick = function(){
+            p.classList.remove('active');
+        }
+        btnToggle.onclick = function(){
+            p.classList.toggle('active');
+        }
+
+    </script>
+</body>
+</html>

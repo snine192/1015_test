@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let obj = new Object();
+        // obj.name = 'John';
+        // obj.mail = 'adsf@gmail.com';
+        // obj.gender = '男';
+        let obj = {
+            name: 'John',
+            mail: 'asdf@gmail.com',
+            gender: '男'
+        }
+        let moster ={
+            level: '10',
+            atk: '12',
+            def : '4',
+        }
+        // console.log(obj);
+        // console.log(obj.name);
+        // console.log(obj.mail);
+        // console.log(obj.gender);
+        // console.log(moster);
+        // console.log(moster.level);
+        // console.log(moster.atk);
+        // console.log(moster.def);
+
+        let consumer =[
+            {
+                id:1,
+                name:'Maker',
+                age:'27',
+                gender:'男'
+            },
+            {
+                id:2,
+                name:'Miki',
+                age:'17',
+                gender:'女'
+            },
+            {
+                id:3,
+                name:'Jaker',
+                age:'19',
+                gender:'男'
+            },
+        ]
+        // console.log(consumer);
+        for(let data of consumer){
+            console.log(data);
+            console.log(data.id);
+            console.log(data.name);
+            console.log(data.age);
+            console.log(data.gender);
+        }
+    </script>
+</body>
+</html>
