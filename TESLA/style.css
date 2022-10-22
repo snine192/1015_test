@@ -1,0 +1,124 @@
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 60px;
+    z-index: 9999;
+}
+.nav-link , .nav-logo {
+    color: black;
+    text-decoration: none;
+    display: inline block;
+    padding-inline: 15px;
+    padding-block: 8xp;
+    transition: 600ms;
+    border-radius: 5px;
+}
+.nav-link:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+/* nav a:not(.nav-logo):hover {
+    background-color: rgba(255, 0, 0, 0.8);
+} */
+section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    scroll-snap-align: start;
+}
+#model-s{
+    background-image: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/8a74d206-66dc-4386-8c7a-88ff32174e7d/bvlatuR/std/4096x2560/Model-S-Main-Hero-Desktop-LHD');
+}
+#model-3{
+    background-image: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/5a7b3001-249f-4065-a330-4ea6a17ccf7b/bvlatuR/std/2560x1708/Model-3-Main-Hero-Desktop-LHD');
+}
+#model-x{
+    background-image: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/8c26f779-11e5-4cfc-bd7c-dcd03b18ff88/bvlatuR/std/4096x2561/Model-X-Main-Hero-Desktop-LHD');
+}
+#model-y{
+    background-image: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/91abd4c7-32a1-41cc-ade5-b64774dbea61/bvlatuR/std/2880x1800/Model-Y-Main-Hero-Desktop-Global?quality=auto-medium&format=auto');
+}
+#cybertruck{
+    background-image: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/0f22af4d-15e0-452d-ba66-1359490b4a0b/bvlatuR/std/2880x1800/Cybertruck-Hero-Desktop');
+}
+#powerwall{
+    background-image: url('https://www.tesla.com/sites/default/files/powerwall/hero/D_PW_Hero_2880x1800.jpg');
+}
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+.title {
+    margin-top: 150px;
+}
+.title h2 { 
+    font-size: 5.5rem;
+}
+.title p , a {
+    font-size: 1.5rem;
+    /* text-decoration: none; */
+    color: black;
+}
+.button-group {
+    margin-bottom: 150px;
+}
+
+.btn {
+    display: inline-block;
+    padding-inline: 80px;
+    padding-block: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+
+}
+.btn-dark {
+    color: #fff;
+    background-color: #222;
+}
+.btn-light {
+    color: #222;
+    background-color: #fff;
+}
+.btn-red {
+    color:#fff;
+    background-color: red;
+}
+.arrow {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    color: black;
+}
+.arrow:hover{
+    animation: arrow 1.5s infinite;
+}
+@keyframes arrow {
+    0%{transform: translateY(0);}
+    20%{transform: translateY(15px);}
+    40%{transform: translateY(0);}
+    60%{transform: translateY(5px);}
+    80%{transform: translateY(0);}
+    100%{transform: translateY(0);}
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding-block: 10px;
+    background-color: rgba(255, 255, 255, 0.13);
+}
+footer a {
+    color: #999;
+    text-decoration: none;
+    margin-inline: 10px;
+}
