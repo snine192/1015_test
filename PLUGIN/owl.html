@@ -9,12 +9,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* body {
             background-color: #098;
         } */
         .slider {
-            width: 1200px;
+            max-width: 1200px;
             margin: auto;
         }
         .slick-next:before, .slick-prev:before {
@@ -24,11 +25,18 @@
             width: 1200px;
             margin: auto;
         }
-        .product-slider-item {
+        /* .product-slider-item {
             margin-inline: 10px;
-        }
+        } */
         .product-slider-item img {
             width: 100%;
+        }
+        .owl-theme .owl-nav [class*='owl-'] {
+            transition: 600ms;
+        }
+        .owl-theme .owl-nav [class*='owl-']:hover {
+            background: initial;
+            color: aqua;
         }
        
     </style>
@@ -49,6 +57,9 @@
         </div>
         <div class="slider-item">
             <img src="https://picsum.photos/id/47/1200/600" alt="">
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/57/1200/600" alt="">
         </div>
     </div>
     <div class="product-slider owl-carousel owl-theme">
@@ -91,8 +102,38 @@
     </div>
     <script>
         $(function(){
-            $('.slider').owlCarousel();
-            $('.product-slider').owlCarousel();
+            $('.slider').owlCarousel({
+                items:1,
+                autoplay: true,
+                loop: true,
+                nav:true,
+                autoplayTimeout:4000,
+                autoplaySpeed:2000,
+                dotsSpeed:2000,
+                navSpeed:2000,
+                stagePadding:100,
+                navText:['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>']
+
+            });
+            $('.product-slider').owlCarousel({
+                margin: 10,
+                center: true,
+                loop: true,
+                autoplay:true,
+                autoplayTimeout:1000,
+                responsive:{
+                    0: {
+                        items:2,
+                        center: false
+                    },
+                    768: {
+                        items: 4,
+                    },
+                    1200: {
+                        items: 6
+                    }
+                }
+            });
         })
     </script>
 </body>
