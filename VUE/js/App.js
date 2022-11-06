@@ -10,7 +10,6 @@ export default {
     },
     components:{
         'app-nav':Nav,
-        'app-div':Div,
-         
+        'app-div':Div
     }
 }
